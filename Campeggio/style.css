@@ -1,0 +1,105 @@
+html {
+    font-family: Inter, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+img {
+    max-width: 240px;
+    /* width: 100%; */
+}
+
+.response {
+    padding: 8px;
+    text-align: center;
+    font-size: 150px;
+    font-weight: bolder;
+    height: 100%;
+    margin: auto;
+}
+
+body {
+    padding: 16px;
+    background-color: rgb(244, 247, 167);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+}
+
+main {
+    margin: 8px auto;
+}
+
+.panel {
+    background-color: rgb(243, 247, 59);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.verifica {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 8px;
+    /* position: absolute; */
+    bottom: 10px;
+    margin: auto;
+    width: 60%;
+}
+
+.response {
+    width: 100%;
+    margin: auto;
+}
+
+audio {
+    display: none;
+}
+
+input {
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1.5px solid;
+    border-color: rgb(192, 192, 192);
+    /* flex-grow: 1; */
+    width: 100%;
+}
+
+button {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1.5px solid;
+    border-color: rgb(192, 192, 192);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(128, 128, 128);
+}
+
+p {
+    text-align: center;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
