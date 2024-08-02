@@ -2,7 +2,7 @@
 <html lang="it">
 
 <head>
-    <title>QR Code verifier</title>
+    <title>Code Verifier</title>
     <link rel="icon" href="image.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,21 +13,39 @@
 
 <body>
     <div class="container">
-        <header class="panel">
-            <h1>QR Code verifier</h1>
-            <img alt="Logo Flavini" src="logo_Flavini.jpg">
+        <header>
+            <img src="logo_Flavini.jpg" alt="Logo Flavini" class="logo">
+            <h1>Code Verifier</h1>
         </header>
         <main>
-            <p>Inserire il codice del proprio badge e del compagno:</p>
-            <div class="panel verifica">
-                <input class="badge" type="number" placeholder="Inserire il codice badge personale">
-                <input class="serial" type="number" placeholder="Inserire il codice badge da verificare">
-                <button>Verifica</button>
+            <div class="input-container">
+                <div class="input-group">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                    <input class="badge" maxlength="1" type="text">
+                </div>
+                <div class="input-group">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                    <input class="serial" maxlength="1" type="text">
+                </div>
             </div>
+            <button disabled>Verifica</button>
+            <button class="reset" style="display: none;">Reimposta</button>
             <div class="response">
-                ?
-                <audio id="wrong" controls src="wrong.mp3"></audio>
-                <audio id="right" controls src="right.m4a"></audio>
+                <p class="message"></p>
+                <audio id="wrong" src="wrong.mp3"></audio>
+                <audio id="right" src="right.m4a"></audio>
             </div>
         </main>
     </div>
