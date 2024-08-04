@@ -19,15 +19,13 @@ body {
     background-size: cover; /* Copri tutta l'area disponibile */
     background-position: center; /* Centra l'immagine */
 }
-    
 
 .container {
     max-width: 600px;
-    width: 100%; /* Assicurati che il contenitore non superi la larghezza dello schermo */
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f4f7a7;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
@@ -91,8 +89,8 @@ button:enabled {
 }
 
 button.reset {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    background-color: #f4f7a7;
+    color: black;
     display: none;
 }
 

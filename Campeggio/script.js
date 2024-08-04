@@ -57,17 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (result === 1) {
             container.style.backgroundColor = '#4CAF50';
-            message.textContent = "Appartenete allo stesso pacchetto.";
+            message.textContent = "Siete insieme.";
             right.currentTime = 0;
             right.play();
         } else if (result === 2) {
             container.style.backgroundColor = '#ff6666';
-            message.textContent = "Almeno uno dei codici NON e' corretto.";
+            message.textContent = "Uno dei codici \u00E8 scorretto.";
             wrong.currentTime = 0;
             wrong.play();
         } else if (result === 0) {
             container.style.backgroundColor = '#ff6666';
-            message.textContent = "NON appertente allo stesso pacchetto.";
+            message.textContent = "Non siete insieme.";
             wrong.currentTime = 0;
             wrong.play();
         }
@@ -85,17 +85,18 @@ document.addEventListener("DOMContentLoaded", () => {
         button.style.display = 'inline-block';
         button.disabled = true;
         resetButton.style.display = 'none';
-        container.style.backgroundColor = '#fff';
+        container.style.backgroundColor = '#f4f7a7';
         message.textContent = '';
     }
 
-    allInputs.forEach(input => {
+    allInputs.forEach((input, index) => {
         input.addEventListener('input', () => {
             input.value = input.value.toUpperCase();
             if (input.value.length === input.maxLength) {
-                const nextInput = input.nextElementSibling;
-                if (nextInput) {
-                    nextInput.focus();
+                if (index === 7) {
+                    serialInputs[0].focus();
+                } else if (index < allInputs.length - 1) {
+                    allInputs[index + 1].focus();
                 }
             }
             updateButtonState();
